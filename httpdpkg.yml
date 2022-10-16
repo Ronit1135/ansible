@@ -1,0 +1,11 @@
+--- #my httpd pkg
+- name: setting target for my httpd package
+  hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  vars:
+    pkgname: httpd
+  tasks:
+   - name: install httpd server on my nodes
+     action: yum name='{{pkgname}}' state=present
