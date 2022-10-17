@@ -1,6 +1,6 @@
 --- #my httpd pkg
 - name: setting target for my httpd package
-  hosts: demo
+  hosts: localhost
   user: ansible
   become: yes
   connection: ssh
